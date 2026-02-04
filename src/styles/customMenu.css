@@ -1,0 +1,33 @@
+main {
+  padding-left: 210px !important;
+}
+
+.c-main-menu {
+  display: none;
+}
+
+.custom-menu {
+  position: fixed;
+  display: grid;
+  top: 0;
+  padding: 100px 0;
+  width: 200px;
+  height: 100%;
+  z-index: 1;
+}
+
+.custom-menu > button {
+  text-align: right;
+}
+
+.custom-menu > button:focus {
+  color: red;
+}
+
+.custom-menu > button:hover {
+  text-decoration: underline;
+}
+
+.custom-menu-bold-text {
+  font-weight: bold;
+}

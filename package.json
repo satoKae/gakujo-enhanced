@@ -1,0 +1,21 @@
+{
+  "name": "gakujo-enhanced",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/tampermonkey": "^5.0.5",
+    "prettier": "^3.7.4",
+    "prettier-plugin-organize-imports": "^4.3.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "lightningcss": "^1.30.2"
+  },
+  "scripts": {
+    "build": "bun run scripts/build.ts",
+    "dev": "bun run scripts/build.ts --dev"
+  }
+}

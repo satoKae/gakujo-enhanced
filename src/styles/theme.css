@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+:root {
+  --color-background: #ffffff;
+  --color-1: #0e1c1d;
+  --color-2: #2a3441;
+  --color-3: #425267;
+  --color-4: #e1e8f8;
+}
+
+table a {
+  text-decoration: underline;
+}
+
+.c-wrapper {
+  background-color: transparent;
+}
+
+.c-btn-prev,
+.c-btn-toggle,
+.index-schedule .calender_week .content:focus,
+.pc .c-pagination .c-paginationList_item:not(.is-current) > a:hover,
+.unit-table .limit-unit-value,
+.unit-table .limit-unit-value-hyphen {
+  background-color: var(--color-background);
+}
+
+.c-btn-toggle:after,
+.c-btn-toggle:before,
+.c-gnav-children,
+.c-gnav-children-dropdown-content,
+.c-gnav-dropdown-content,
+.c-gnav-dropdown.is-active,
+.c-gnav-link:hover,
+.c-main-menu-btn:hover,
+.c-popup-menu-children,
+.c-popup-menu-dropdown-content {
+  background-color: var(--color-1);
+}
+
+.c-btn-delete,
+.c-btn-search-large,
+.c-btn-submit01.active,
+.c-bulletin-board-title.js-accordion:after,
+.c-bulletin-board-title.js-accordion:before,
+.c-category-item .c-btn.select,
+.c-gnav,
+.c-gnav-children-link:hover,
+.c-half-btn .is-active,
+.c-half-btn .is-active,
+.c-icon-plus:after,
+.c-icon-plus:before,
+.c-input-radio .box::after,
+.c-main-menu-btn,
+.c-page-back-link,
+.c-popup-menu,
+.c-tab-item.is-active .c-tab-button,
+.c-tab-list:after,
+.dropbtn,
+.js-progress-graph.is-active .js-progress-graph-bar,
+.pc .c-tab-button:hover,
+.ui-dialog-buttonset button.dialog-btn-ok,
+.ui-dialog-titlebar.ui-corner-all.ui-widget-header.ui-helper-clearfix,
+li.c-gnav-item.c-gnav-children-dropdown.accordion.-pc-none.is-active > a {
+  background-color: var(--color-2);
+}
+
+.c-btn-submit01:disabled {
+  background-color: var(--color-3);
+}
+
+.c-form-box .checkbox input:checked + span,
+.c-heading-container.-all-over,
+.c-input-radio input[type='radio']:checked + .box,
+.dataTables_wrapper.dataTables_paginate.paginate_button:hover:not(.current):not(.next):not(.previous),
+.index-schedule .today .content,
+.pc .c-table.-tr-color tbody tr:not(.not-hover):hover,
+.stady-sec02 .stady-sec02-header,
+.unit-table .header-unit,
+.unit-table .sub-header,
+div.c-heading-contents .c-btn.c-btn-submit01 {
+  background-color: var(--color-4);
+}
+
+.c-btn-line,
+.c-btn-submit01,
+.c-btn-zoomup,
+.c-category-item .c-btn.select,
+.c-design-theme-image input[type='radio']:checked + label:after,
+.c-form-box .checkbox input:checked + span,
+.c-form-box .checkbox input:checked + span:before,
+.c-input-radio input[type='radio']:checked + .box,
+.c-input-radio input[type='radio']:checked + .box::before,
+.c-page-top-link,
+.c-paginationList_item.is-current.c-heading-h3 > div,
+.c-tab-item.is-active .c-tab-button,
+.pc .c-pagination .c-paginationList_item:not(.is-current) > a:hover,
+.pc .c-tab-button:hover,
+.ui-button:active,
+.ui-button:focus,
+.ui-button:hover,
+.ui-dialog-buttonset button,
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons {
+  border-color: var(--color-2);
+}
+
+.c-btn-submit01:disabled {
+  border-color: var(--color-3);
+}
+
+.c-form-box .checkbox input:checked + span:after,
+.c-gnav-children-link,
+.c-gnav::-webkit-scrollbar {
+  border-bottom-color: var(--color-2);
+}
+
+.c-form-box .checkbox input:checked + span:after,
+.c-gnav-children-dropdown-content,
+.c-gnav-dropdown-content {
+  border-left-color: var(--color-2);
+}
+
+.c-btn-line,
+.c-btn-submit01,
+.c-color-base,
+.c-link,
+.c-tab-button,
+.syllabuscolor,
+.syllabuscolor2,
+.ui-dialog-buttonset button.dialog-btn-cancel {
+  color: var(--color-2);
+}
+
+.dataTables_paginate.paginate_button.next:hover:not(.disabled),
+.dataTables_paginate.paginate_button.previous:hover:not(.disabled) {
+  background: var(--color-background) !important;
+  border: var(--color-2) !important;
+  color: #333 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background: var(--color-2) !important;
+}
