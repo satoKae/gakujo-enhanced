@@ -21,25 +21,35 @@
 
 1. リポジトリをクローン
 
-    ```bash
-    git clone https://github.com/satokae/gakujo-enhanced.git
-    cd gakujo-enhanced
-    ```
+   ```bash
+   git clone https://github.com/satokae/gakujo-enhanced.git
+   cd gakujo-enhanced
+   ```
 
 2. 依存のインストール
 
-    ```bash
-    bun install
-    ```
+   ```bash
+   bun install
+   ```
 
 3. ビルド
 
-    ```bash
-    bun run build
-    ```
+   ```bash
+   bun run build
+   ```
 
 `dist/index.user.js` にファイルが生成されます。
 
 ## 開発
 
 `bun run dev` で開発サーバーが起動します。
+
+## 更新履歴
+
+### v1.0.0 2026-02-04
+
+- 公開しました
+
+### v1.1.0 2026-02-09
+
+- 機能の有効/無効をメニューで切り替えられるようにしました
