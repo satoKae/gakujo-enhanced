@@ -1,21 +1,28 @@
-import { addCalendarDownloadButton } from './features/addCalendarDownloadButton';
-import { addCustomMenu } from './features/addCustomMenu';
-import { changeSelectValue } from './features/changeSelectValue';
-import { hidePerformance } from './features/hidePerformance';
-import { loginAuto } from './features/loginAuto';
-import { sortSelectOptions } from './features/sortSelectOptions';
+import { features } from './features';
+import { MenuManager } from './MenuManager';
 
-import customMenuStyle from './styles/customMenu.css';
-import theme from './styles/theme.css';
-
-GM.addStyle(theme);
-GM.addStyle(customMenuStyle);
+const menu = new MenuManager(features);
+menu.init();
 
 window.addEventListener('load', () => {
-  loginAuto();
-  hidePerformance();
-  addCalendarDownloadButton();
-  addCustomMenu();
-  sortSelectOptions();
-  changeSelectValue();
+  const currentTitle = document.title;
+  for (const feature of features) {
+    if (
+      !feature.matchTitle.some((title) =>
+        typeof title === 'string' ? currentTitle === title : title.test(currentTitle)
+      )
+    ) {
+      continue;
+    }
+    if (!GM_getValue(feature.key, true)) {
+      continue;
+    }
+
+    if (feature.style) {
+      GM.addStyle(feature.style);
+    }
+    if (feature.func) {
+      feature.func();
+    }
+  }
 });

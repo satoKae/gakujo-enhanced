@@ -8,10 +8,6 @@ function sort(selectElement: HTMLSelectElement): void {
 }
 
 export function sortSelectOptions(): void {
-  if (document.title !== '授業参考情報一覧') {
-    return;
-  }
-
   const subjectSelect = document.getElementById('changeClassSubjectCmb');
   const startYearSelect = document.getElementById('changeStartYearCmb');
   const startSemesterSelect = document.getElementById('changeStartSemesterCmb');

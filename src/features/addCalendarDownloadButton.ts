@@ -117,11 +117,7 @@ function createDownloadButton(): HTMLLIElement {
 export function addCalendarDownloadButton(): void {
   const anchorElement = Array.from(document.getElementsByTagName('a')).find((e) => e.textContent === '月間表示');
 
-  if (
-    document.title !== 'スケジュール' ||
-    !(anchorElement instanceof HTMLElement) ||
-    !anchorElement.classList.contains('is-active')
-  ) {
+  if (!(anchorElement instanceof HTMLElement) || !anchorElement.classList.contains('is-active')) {
     return;
   }
 
