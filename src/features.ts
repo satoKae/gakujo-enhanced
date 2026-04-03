@@ -42,9 +42,9 @@ export const features: Feature[] = [
     func: sortSelectOptions,
   },
   {
-    label: '連絡一覧の表示件数を変更',
+    label: '一覧の表示件数を変更',
     key: 'feature_change_select_value',
-    matchTitle: ['連絡一覧'],
+    matchTitle: ['連絡一覧', '履修科目選択'],
     func: changeSelectValue,
   },
   {
