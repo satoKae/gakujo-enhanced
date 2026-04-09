@@ -2,6 +2,7 @@ import { addCalendarDownloadButton } from './features/addCalendarDownloadButton'
 import { addCustomMenu } from './features/addCustomMenu';
 import { changeSelectValue } from './features/changeSelectValue';
 import { hidePerformance } from './features/hidePerformance';
+import { linkifyMessage } from './features/linkifyMessage';
 import { loginAuto } from './features/loginAuto';
 import { sortSelectOptions } from './features/sortSelectOptions';
 
@@ -59,5 +60,11 @@ export const features: Feature[] = [
     key: 'feature_theme',
     matchTitle: [/^.*$/],
     style: theme,
+  },
+  {
+    label: '連絡内容のリンク化',
+    key: 'feature_linkify_message',
+    matchTitle: ['連絡詳細'],
+    func: linkifyMessage,
   },
 ];
