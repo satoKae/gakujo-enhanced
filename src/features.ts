@@ -62,9 +62,9 @@ export const features: Feature[] = [
     style: theme,
   },
   {
-    label: '連絡内容のリンク化',
+    label: '内容のリンク化',
     key: 'feature_linkify_message',
-    matchTitle: ['連絡詳細'],
+    matchTitle: ['連絡詳細', 'シラバス詳細'],
     func: linkifyMessage,
   },
 ];
