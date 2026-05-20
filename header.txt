@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gakujo Enhanced
 // @namespace    http://github.com/satokae/gakujo-enhanced
-// @version      1.2.0
+// @version      1.3.0
 // @description  学情システムの機能追加
 // @author       satokae
 // @match        https://gakujo.shizuoka.ac.jp/*
