@@ -7,7 +7,7 @@ export function addKeyboardShortcuts(): void {
 
   if (headerInformation instanceof HTMLElement && headerInformationButton instanceof HTMLAnchorElement) {
     document.addEventListener('keyup', (e) => {
-      if (e.ctrlKey && e.code === 'KeyI') {
+      if (e.ctrlKey && !e.altKey && !e.shiftKey && e.code === 'KeyI') {
         if (headerInformation.classList.contains('is-open')) {
           headerInformationButton.click();
           if (focusedOn instanceof HTMLElement) {
