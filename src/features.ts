@@ -1,5 +1,6 @@
 import { addCalendarDownloadButton } from './features/addCalendarDownloadButton';
 import { addCustomMenu } from './features/addCustomMenu';
+import { addKeyboardShortcuts } from './features/addKeyboardShortcuts';
 import { changeSelectValue } from './features/changeSelectValue';
 import { hidePerformance } from './features/hidePerformance';
 import { hideReportNotification } from './features/hideReportNotification';
@@ -73,5 +74,11 @@ export const features: Feature[] = [
     key: 'feature_hide_report_notification',
     matchTitle: ['連絡一覧'],
     func: hideReportNotification,
+  },
+  {
+    label: 'キーボードショートカットを追加',
+    key: 'feature_add_keyboard_shortcuts',
+    matchTitle: [/^.*$/],
+    func: addKeyboardShortcuts,
   },
 ];
