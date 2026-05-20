@@ -9,11 +9,12 @@ export function focusSidebar(): void {
   for (const menuItem of customMenu.children) {
     if (isInRelatedPage(menuItem.textContent) && menuItem instanceof HTMLElement) {
       menuItem.focus();
+      break;
     }
   }
 }
 
-function isInRelatedPage(checkString: string): boolean {
+export function isInRelatedPage(checkString: string): boolean {
   switch (document.title) {
     case 'ホーム画面（学生・保護者）':
       return checkString === 'ホーム';

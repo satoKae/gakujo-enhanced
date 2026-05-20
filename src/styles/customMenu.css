@@ -31,3 +31,8 @@ main {
 .custom-menu-bold-text {
   font-weight: bold;
 }
+
+.custom-menu-marker::before {
+  content: '▶';
+  margin-right: 0.2em;
+}
