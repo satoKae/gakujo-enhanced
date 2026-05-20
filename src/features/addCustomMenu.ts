@@ -1,3 +1,5 @@
+import { focusSidebar } from '../utils/focusSidebar';
+
 const menuBoldItems: string[] = ['ホーム', '連絡通知', 'スケジュール', '授業参考情報', '課題・アンケート提出'];
 
 export function addCustomMenu(): void {
@@ -10,6 +12,7 @@ export function addCustomMenu(): void {
   }
 
   menuElement.classList.add('custom-menu');
+  menuElement.id = 'custom-menu';
   linkElements.forEach((e) => {
     if (e instanceof HTMLElement) {
       const button = document.createElement('button');
@@ -25,4 +28,5 @@ export function addCustomMenu(): void {
       menuElement.appendChild(button);
     }
   });
+  focusSidebar();
 }
