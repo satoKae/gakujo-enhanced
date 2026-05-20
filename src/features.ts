@@ -9,6 +9,7 @@ import { loginAuto } from './features/loginAuto';
 import { sortSelectOptions } from './features/sortSelectOptions';
 
 import customMenuStyle from './styles/customMenu.css';
+import fixFocusingStyle from './styles/fixFocusing.css';
 import theme from './styles/theme.css';
 
 export interface Feature {
@@ -80,5 +81,11 @@ export const features: Feature[] = [
     key: 'feature_add_keyboard_shortcuts',
     matchTitle: [/^.*$/],
     func: addKeyboardShortcuts,
+  },
+  {
+    label: '非表示のポップアップにフォーカスを当てない',
+    key: 'feature_no_focus_on_hidden_popup',
+    matchTitle: [/^.*$/],
+    style: fixFocusingStyle,
   },
 ];

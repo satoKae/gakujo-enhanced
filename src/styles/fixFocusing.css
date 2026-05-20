@@ -1,0 +1,11 @@
+.c-header-user-menu.is-open .c-header-user-menu-popup,
+.c-header-campuslink.is-open .c-header-campuslink-popup,
+.c-header-information.is-open .c-header-information-popup {
+  visibility: visible;
+}
+
+.c-header-user-menu-popup,
+.c-header-campuslink-popup,
+.c-header-information-popup {
+  visibility: hidden;
+}
