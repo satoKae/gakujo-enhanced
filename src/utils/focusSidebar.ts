@@ -18,9 +18,12 @@ export function isInRelatedPage(checkString: string): boolean {
   switch (document.title) {
     case 'ホーム画面（学生・保護者）':
       return checkString === 'ホーム';
-
     case '単位修得情報':
       return checkString === '成績ダッシュボード';
+    case 'スケジュール・予約':
+      return checkString === '予約申込';
+    case '申請受付状況一覧':
+      return checkString === '各種申請';
   }
 
   const segments = Array.from(segmenter.segment(checkString))
