@@ -32,7 +32,7 @@ export function addKeyboardShortcuts(): void {
 
   // [, ]
   document.addEventListener('keyup', (e) => {
-    if (e.ctrlKey || e.altKey || e.shiftKey) {
+    if (isTextInputActive() || e.ctrlKey || e.altKey || e.shiftKey) {
       return;
     }
 
@@ -45,4 +45,19 @@ export function addKeyboardShortcuts(): void {
       }
     }
   });
+}
+
+function isTextInputActive(): boolean {
+  const activeElement = document.activeElement;
+  if (activeElement instanceof HTMLTextAreaElement) {
+    return true;
+  }
+
+  if (activeElement instanceof HTMLInputElement) {
+    return !['button', 'checkbox', 'color', 'file', 'image', 'radio', 'range', 'reset', 'submit', 'hidden'].includes(
+      activeElement.type
+    );
+  }
+
+  return activeElement instanceof HTMLElement && activeElement.isContentEditable;
 }
