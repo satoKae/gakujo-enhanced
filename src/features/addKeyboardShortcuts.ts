@@ -12,19 +12,29 @@ export function addKeyboardShortcuts(): void {
   const mainElement = document.getElementsByTagName('main')?.[0];
   let focusedOn: undefined | null | Element;
 
-  // Ctrl + I
+  // Ctrl + I, Escape
   if (headerInformation instanceof HTMLElement && headerInformationButton instanceof HTMLAnchorElement) {
+    const closePopup = () => {
+      headerInformationButton.click();
+      if (focusedOn instanceof HTMLElement) {
+        focusedOn.focus(preventScroll);
+      }
+    };
+
     document.addEventListener('keyup', (e) => {
+      const isPopupOpen = headerInformation.classList.contains('is-open');
+
       if (e.ctrlKey && !e.altKey && !e.shiftKey && e.key === 'i') {
-        if (headerInformation.classList.contains('is-open')) {
-          headerInformationButton.click();
-          if (focusedOn instanceof HTMLElement) {
-            focusedOn.focus(preventScroll);
-          }
+        if (isPopupOpen) {
+          closePopup();
         } else {
           focusedOn = document.activeElement;
           headerInformationButton.click();
           headerInformationButton.focus(preventScroll);
+        }
+      } else if (!e.ctrlKey && !e.altKey && !e.shiftKey && e.key === 'Escape') {
+        if (isPopupOpen) {
+          closePopup();
         }
       }
     });
