@@ -28,6 +28,10 @@ export function isInRelatedPage(checkString: string): boolean {
       return checkString === '予約申込';
     case '申請受付状況一覧':
       return checkString === '各種申請';
+    case '時間割参照':
+      return checkString === 'スケジュール';
+    case '試験時間割':
+      return checkString === 'スケジュール';
   }
 
   const segments = Array.from(segmenter.segment(checkString))
