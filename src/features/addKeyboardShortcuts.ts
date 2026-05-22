@@ -15,7 +15,7 @@ export function addKeyboardShortcuts(): void {
   // Ctrl + I
   if (headerInformation instanceof HTMLElement && headerInformationButton instanceof HTMLAnchorElement) {
     document.addEventListener('keyup', (e) => {
-      if (e.ctrlKey && !e.altKey && !e.shiftKey && e.code === 'KeyI') {
+      if (e.ctrlKey && !e.altKey && !e.shiftKey && e.key === 'i') {
         if (headerInformation.classList.contains('is-open')) {
           headerInformationButton.click();
           if (focusedOn instanceof HTMLElement) {
@@ -36,9 +36,9 @@ export function addKeyboardShortcuts(): void {
       return;
     }
 
-    if (e.code === 'BracketRight') {
+    if (e.key === '[') {
       focusSidebar();
-    } else if (e.code === 'Backslash') {
+    } else if (e.key === ']') {
       const focusableElement = mainElement?.querySelector(focusableSelector);
       if (focusableElement instanceof HTMLElement) {
         focusableElement.focus();
