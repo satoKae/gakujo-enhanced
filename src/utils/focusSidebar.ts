@@ -9,8 +9,12 @@ export function focusSidebar(): void {
   for (const menuItem of customMenu.children) {
     if (isInRelatedPage(menuItem.textContent) && menuItem instanceof HTMLElement) {
       menuItem.focus();
-      break;
+      return;
     }
+  }
+
+  if (customMenu.children?.[0] instanceof HTMLElement) {
+    customMenu.children[0].focus();
   }
 }
 

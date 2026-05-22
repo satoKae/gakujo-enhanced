@@ -35,5 +35,10 @@ export function addCustomMenu(): void {
       menuElement.appendChild(button);
     }
   });
+
+  if (!isMarkerAdded) {
+    menuElement.children?.[0]?.classList.add('custom-menu-marker');
+  }
+
   focusSidebar();
 }
