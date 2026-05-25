@@ -6,6 +6,7 @@ import { hidePerformance } from './features/hidePerformance';
 import { hideReportNotification } from './features/hideReportNotification';
 import { linkifyMessage } from './features/linkifyMessage';
 import { loginAuto } from './features/loginAuto';
+import { makeFocusable } from './features/makeFocusable';
 import { sortSelectOptions } from './features/sortSelectOptions';
 
 import customMenuStyle from './styles/customMenu.css';
@@ -87,5 +88,11 @@ export const features: Feature[] = [
     key: 'feature_no_focus_on_hidden_popup',
     matchTitle: [/^.*$/],
     style: fixFocusingStyle,
+  },
+  {
+    label: '一部要素をフォーカス可能にする',
+    key: 'feature_make_focusable',
+    matchTitle: [/^.*$/],
+    func: makeFocusable,
   },
 ];
